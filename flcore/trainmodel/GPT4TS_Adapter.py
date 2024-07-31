@@ -51,6 +51,7 @@ class GPT4TSPrompt(nn.Module):
             self.peft_(configs)
 
         if self.task_name == 'long_term_forecast' or self.task_name == 'short_term_forecast':
+            self._ffn = nn.Linear(configs.patch_size, configs.d_model)
             self.in_layer = nn.Linear(configs.patch_size, configs.d_model)
 
             self.out_layer = nn.Linear(configs.d_model * self.patch_num, configs.pred_len)
@@ -131,6 +132,10 @@ class GPT4TSPrompt(nn.Module):
         seasonal = self.enc_embedding_seasonal(seasonal, x_mark_enc)
         trend = self.enc_embedding_trend(trend, x_mark_enc)
 
+        x_enc_init = self.revin_layer(x_enc)
+        x_enc_init = rearrange(x_enc_init, 'b l m -> b m l')
+        x_enc_init = self.padding_patch_layer(x_enc_init)
+        x_enc_init = rearrange(x_enc_init, 'b m n p -> (b m) n p')
         # decomposition_init = torch.cat([residual, seasonal, trend], dim=0)
         
         residual = rearrange(residual, 'b l m -> b m l')
@@ -150,6 +155,9 @@ class GPT4TSPrompt(nn.Module):
 
         # outputs = self.in_layer(x_enc)
         decomposition_init = torch.cat([trend, seasonal, residual], dim=-1)
+
+        # cat with orginal series patches
+        decomposition_init = torch.cat([decomposition_init, self._ffn(x_enc_init)], dim=1)
 
         decomposition_init = self.in_layer(decomposition_init)
 

@@ -1,11 +1,13 @@
 # Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models
 
-### Official implementation for ``Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models``, NeurIPS 2024.
+Official implementation for ``Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models``, NeurIPS 2024.
 
 ---
+
 :triangular_flag_on_post:**News** (2024.12) The official implementation of our paper is posted, and we are still shaping our code and dataset for achieving a complete repo.
 
 :triangular_flag_on_post:**News** (2024.09) Our paper has been accepted by **NeurIPS 2024** and we will be releasing the code for our paper ASAP.
+
 ---
 
 **Abstract**

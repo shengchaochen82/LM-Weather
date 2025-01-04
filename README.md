@@ -3,6 +3,7 @@
 Official implementation for ``Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models``, NeurIPS 2024.
 
 ---
+:triangular_flag_on_post:**News** (2025.01) The datasets are currently undergoing external review and awaiting licensing. We are planning to update the code repo and make the data publicly available for download by early Feb.
 
 :triangular_flag_on_post:**News** (2024.12) The official implementation of our paper is posted, and we are still shaping our code and dataset for achieving a complete repo. ``The utilization will be released soon``.
 

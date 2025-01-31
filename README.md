@@ -18,6 +18,8 @@ LM-Weather demonstrates that pre-trained language models (PLMs) can serve as pow
 - Privacy-preserving communication between clients and server
 - Strong performance on forecasting and imputation tasks
 
+![What's News](assest/image.png "What's New")
+
 ## Project Status
 - [x] Release code
 - [ ] Release detailed training tutorials

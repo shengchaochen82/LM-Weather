@@ -21,6 +21,7 @@ LM-Weather demonstrates that pre-trained language models (PLMs) can serve as pow
 ## Project Status
 - [x] Release code
 - [ ] Release detailed training tutorials
+- [ ] License detailed dataset
 - [x] corresponding tutorials
 - [x] Release papers
 
@@ -29,10 +30,10 @@ This paper demonstrates that pre-trained language models (PLMs) are strong found
 
 ## Quick Start
 ### Clone this repository
-git clone https://github.com/username/LM-Weather.git
+```git clone https://github.com/username/LM-Weather.git```
 
 ### Install dependencies
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
 ### LLM(s) and Time Series Benchmark Preparation
 - We used GPT2 as the foundation model during experiments, supported by OpenAI and Huggingface, which you can [download weights](https://huggingface.co/openai-community/gpt2/tree/main) (at your own risk) here.

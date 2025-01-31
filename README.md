@@ -36,10 +36,10 @@ This paper demonstrates that pre-trained language models (PLMs) are strong found
 ```pip install -r requirements.txt```
 
 ### LLM(s) and Time Series Benchmark Preparation
-- We used GPT2 as the foundation model during experiments, supported by OpenAI and Huggingface, which you can [download weights](https://huggingface.co/openai-community/gpt2/tree/main) (at your own risk) here.
-- We use PEFT (Parameter-Efficient Fine-Tuning) techniques to support the foundation model adaption, PEFT is supported by [Huggingface PEFT](https://github.com/huggingface/peft), you can clone it or directly use it in our repo.
-- We use lots of time series models as the baseline, which is supported by [Time-Series-Library](https://github.com/thuml/Time-Series-Library), you can clone it or directly use it in our repo.
-- For addition experiments (different LLM backbone), you can download these from [Open-LLAMA](https://huggingface.co/openlm-research/open_llama_3b_v2) and [Bert](https://huggingface.co/google-bert/bert-base-uncased).
+- We used GPT2 as the foundation model during experiments, supported by OpenAI and Huggingface. You can [download weights](https://huggingface.co/openai-community/gpt2/tree/main) (at your own risk) here.
+- We employed PEFT (Parameter-Efficient Fine-Tuning) techniques to facilitate the adaptation of the foundational model. PEFT is supported by [Huggingface PEFT](https://github.com/huggingface/peft), which you can clone or use directly from our repository.
+- We utilized various time series models as the baseline, supported by the [Time-Series-Library](https://github.com/thuml/Time-Series-Library),. You can clone it or use it directly from our repository.
+- For additional experiments with different LLM backbones, you can download models [Open-LLAMA](https://huggingface.co/openlm-research/open_llama_3b_v2) and [Bert](https://huggingface.co/google-bert/bert-base-uncased).
 
 ### Training Script Parameters Explanation
 

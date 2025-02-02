@@ -17,7 +17,7 @@ This is the official implementation for "Personalized Adapter for Large Meteorol
 - [x] corresponding tutorials
 - [x] Release papers
 
-**Remark.** Before we relsease the full datasets, you can try our framework your own datasets according to the dataset format of [Time-Series-Library](https://github.com/thuml/Time-Series-Library).
+**Remark.** Before we relsease the full datasets, you can try our framework on your own datasets according to the dataset format of [Time-Series-Library](https://github.com/thuml/Time-Series-Library).
 
 ## Overview
 LM-Weather demonstrates that pre-trained language models (PLMs) can serve as powerful foundation models for on-device meteorological modeling. Our approach enables:

@@ -6,9 +6,18 @@
 This is the official implementation for "Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models" (NeurIPS 2024).
 
 ## News
-- [2025.01] 🚀 Datasets are under external review and licensing. Public release expected early Feb.
-- [2024.12] 🔥 Official code implementation posted. Full utilization guide coming soon.
+- [2025.01] 🚀 Datasets are under external review and licensing. Public release expected early Feb. 
+- [2024.12] 🔥 Official code implementation posted. ~~Full utilization guide coming soon.~~ Tutorials have been released.
 - [2024.09] 📢 Paper accepted at NeurIPS 2024.
+  
+## Project Status
+- [x] Release code
+- [x] Release detailed training tutorials
+- [ ] License detailed dataset
+- [x] corresponding tutorials
+- [x] Release papers
+
+**Remark.** Before we relsease the full datasets, you can try our framework your own datasets according to the dataset format of [Time-Series-Library](https://github.com/thuml/Time-Series-Library).
 
 ## Overview
 LM-Weather demonstrates that pre-trained language models (PLMs) can serve as powerful foundation models for on-device meteorological modeling. Our approach enables:
@@ -20,12 +29,6 @@ LM-Weather demonstrates that pre-trained language models (PLMs) can serve as pow
 
 ![What's News](assest/image.png "What's New")
 
-## Project Status
-- [x] Release code
-- [ ] Release detailed training tutorials
-- [ ] License detailed dataset
-- [x] corresponding tutorials
-- [x] Release papers
 
 ## Abstract
 This paper demonstrates that pre-trained language models (PLMs) are strong foundation models for on-device meteorological variable modeling. We present LM-Weather, a generic approach to taming PLMs, that have learned massive sequential knowledge from the universe of natural language databases, to acquire an immediate capability to obtain highly customized models for heterogeneous meteorological data on devices while keeping high efficiency. Concretely, we introduce a lightweight personalized adapter into PLMs and endows it with weather pattern awareness. During communication between clients and the server, low-rank-based transmission is performed to effectively fuse the global knowledge among devices while maintaining high communication efficiency and ensuring privacy. Experiments on real-wold dataset show that LM-Weather outperforms the state-of-the-art results by a large margin across various tasks (e.g., forecasting and imputation at different scales). We provide extensive and in-depth analyses experiments, which verify that LM-Weather can (1) indeed leverage sequential knowledge from natural language to accurately handle meteorological sequence, (2) allows each devices obtain highly customized models under significant heterogeneity, and (3) generalize under data-limited and out-of-distribution (OOD) scenarios.
@@ -61,7 +64,7 @@ Below is a detailed explanation of the training script parameters (example):
 | gr (global_round) | 50 | Number of global communication rounds |
 
 **Model Configuration:**
-- `base_model`: GPT2 - Using GPT2 as foundation model
+- `base_model`: GPT2 - Using GPT2 as foundation model (Bert or LLAMA)
 - `freeze_part`: 2 - Number of frozen layers 
 - `gpt_layers`: 1 - Number of GPT layers to use
 - `lradj`: type1 - Learning rate adjustment type
@@ -73,9 +76,9 @@ Below is a detailed explanation of the training script parameters (example):
 
 **Data Configuration:**
 - `features`: MS - Multivariate input, Single output
-- `freq`: h - Hourly frequency
-- `target`: rh - Target variable (relative humidity)
-- `dataset`: Weather-Tiny - Dataset name
+- `freq`: h - Hourly frequency 
+- `target`: rh - Target variable (relative humidity, you can custimise it in you mind)
+- `dataset`: Weather-Tiny - Dataset name (You can customise it in you mind)
 
 Example usage:
 ```bash

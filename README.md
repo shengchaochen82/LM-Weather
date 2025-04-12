@@ -6,14 +6,14 @@
 This is the official implementation for "Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models" (NeurIPS 2024).
 
 ## News
-- [2025.01] 🚀 Datasets are under external review and licensing. Public release expected early Feb. 
+- [2025.01] 🚀 ~~Datasets are under external review and licensing. Public release expected early Feb.~~  The datasets can be found at [Google Driver](https://drive.google.com/file/d/19OuWAH_nJEJQ7AnMu6kJLEofhRHGDcuE/view?usp=sharing).
 - [2024.12] 🔥 Official code implementation posted. ~~Full utilization guide coming soon.~~ Tutorials have been released.
 - [2024.09] 📢 Paper accepted at NeurIPS 2024.
   
 ## Project Status
 - [x] Release code
 - [x] Release detailed training tutorials
-- [ ] License detailed dataset
+- [x] License detailed dataset
 - [x] corresponding tutorials
 - [x] Release papers
 

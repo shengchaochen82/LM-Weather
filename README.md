@@ -14,7 +14,7 @@
   <a href="https://opensource.org/licenses/MIT">
     <img src="https://img.shields.io/badge/License-MIT-%234ECDC4?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License">
   </a>
-  <a href="https://github.com/username/LM-Weather/stargazers">
+  <a href="https://github.com/shengchaochen82/LM-Weather/stargazers">
     <img src="https://img.shields.io/github/stars/username/LM-Weather?style=for-the-badge&color=FFD93D&logo=github&logoColor=white" alt="GitHub Stars">
   </a>
 </p>

@@ -1,107 +1,263 @@
-# Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models
+<div align="center">
 
-[![arXiv](https://img.shields.io/badge/NeurIPS%202024-Paper-<COLOR>.svg)](https://openreview.net/forum?id=llTroju97T)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# 🌦️ LM-Weather
 
-This is the official implementation for "Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models" (NeurIPS 2024).
+<p align="center">
+  <em><b>Personalized Adapter for Large Meteorology Model on Devices</b></em><br>
+  <em>Towards Weather Foundation Models</em>
+</p>
 
-## News
-- [2025.01] 🚀 ~~Datasets are under external review and licensing. Public release expected early Feb.~~  The datasets can be found at [Google Driver](https://drive.google.com/file/d/19OuWAH_nJEJQ7AnMu6kJLEofhRHGDcuE/view?usp=sharing).
-- [2024.12] 🔥 Official code implementation posted. ~~Full utilization guide coming soon.~~ Tutorials have been released.
-- [2024.09] 📢 Paper accepted at NeurIPS 2024.
-  
-## Project Status
-- [x] Release code
-- [x] Release detailed training tutorials
-- [x] License detailed dataset
-- [x] corresponding tutorials
-- [x] Release papers
+<p align="center">
+  <a href="https://openreview.net/forum?id=llTroju97T">
+    <img src="https://img.shields.io/badge/NeurIPS%202024-Paper-%23FF6B6B?style=for-the-badge&logo=openreview&logoColor=white" alt="NeurIPS 2024 Paper">
+  </a>
+  <a href="https://opensource.org/licenses/MIT">
+    <img src="https://img.shields.io/badge/License-MIT-%234ECDC4?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License">
+  </a>
+  <a href="https://github.com/username/LM-Weather/stargazers">
+    <img src="https://img.shields.io/github/stars/username/LM-Weather?style=for-the-badge&color=FFD93D&logo=github&logoColor=white" alt="GitHub Stars">
+  </a>
+</p>
 
-**Remark.** ~~Before we relsease the full datasets~~Our datasets have been released. PS: If you want to explore the framework on different time series domains, you can try our framework on your own datasets according to the dataset format of [Time-Series-Library](https://github.com/thuml/Time-Series-Library).
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,30&height=150&section=header&text=Weather%20Foundation%20Models&fontSize=40&fontColor=fff&animation=twinkling" alt="Header">
+</p>
 
-## Overview
-LM-Weather demonstrates that pre-trained language models (PLMs) can serve as powerful foundation models for on-device meteorological modeling. Our approach enables:
+</div>
 
-- Customized models for heterogeneous meteorological data
-- Efficient knowledge fusion via low-rank transmission  
-- Privacy-preserving communication between clients and server
-- Strong performance on forecasting and imputation tasks
+---
 
-![What's News](assest/image.png "What's New")
+## 🚀 What's New
 
+<table>
+<tr>
+<td width="100%">
 
-## Abstract
-This paper demonstrates that pre-trained language models (PLMs) are strong foundation models for on-device meteorological variable modeling. We present LM-Weather, a generic approach to taming PLMs, that have learned massive sequential knowledge from the universe of natural language databases, to acquire an immediate capability to obtain highly customized models for heterogeneous meteorological data on devices while keeping high efficiency. Concretely, we introduce a lightweight personalized adapter into PLMs and endows it with weather pattern awareness. During communication between clients and the server, low-rank-based transmission is performed to effectively fuse the global knowledge among devices while maintaining high communication efficiency and ensuring privacy. Experiments on real-wold dataset show that LM-Weather outperforms the state-of-the-art results by a large margin across various tasks (e.g., forecasting and imputation at different scales). We provide extensive and in-depth analyses experiments, which verify that LM-Weather can (1) indeed leverage sequential knowledge from natural language to accurately handle meteorological sequence, (2) allows each devices obtain highly customized models under significant heterogeneity, and (3) generalize under data-limited and out-of-distribution (OOD) scenarios.
+| 📅 Date | 🎉 Update |
+|---------|-----------|
+| **2025.01** | 🚀 ~~Datasets under external review~~ **Datasets Released!** Available on [Google Drive](https://drive.google.com/file/d/19OuWAH_nJEJQ7AnMu6kJLEofhRHGDcuE/view?usp=sharing) |
+| **2024.12** | 🔥 Official code implementation released + Full tutorials |
+| **2024.09** | 📢 Paper accepted at **NeurIPS 2024**! |
 
-## Quick Start
-### Clone this repository
-```git clone https://github.com/username/LM-Weather.git```
+</td>
+</tr>
+</table>
 
-### Install dependencies
-```pip install -r requirements.txt```
+---
 
-### LLM(s) and Time Series Benchmark Preparation
-- We used GPT2 as the foundation model during experiments, supported by OpenAI and Huggingface. You can [download weights](https://huggingface.co/openai-community/gpt2/tree/main) (at your own risk) here.
-- We employed PEFT (Parameter-Efficient Fine-Tuning) techniques to facilitate the adaptation of the foundational model. PEFT is supported by [Huggingface PEFT](https://github.com/huggingface/peft), which you can clone or use directly from our repository.
-- We utilized various time series models as the baseline, supported by the [Time-Series-Library](https://github.com/thuml/Time-Series-Library),. You can clone it or use it directly from our repository.
-- For additional experiments with different LLM backbones, you can download models [Open-LLAMA](https://huggingface.co/openlm-research/open_llama_3b_v2) and [Bert](https://huggingface.co/google-bert/bert-base-uncased).
+## 📊 Project Status
 
-### Training Script Parameters Explanation
+<div align="center">
 
-Below is a detailed explanation of the training script parameters (example):
+| ✅ Completed | 📦 Status |
+|:------------:|:---------:|
+| Release Code | ![Done](https://img.shields.io/badge/✓-Done-brightgreen) |
+| Training Tutorials | ![Done](https://img.shields.io/badge/✓-Done-brightgreen) |
+| Dataset License | ![Done](https://img.shields.io/badge/✓-Done-brightgreen) |
+| Tutorial Documentation | ![Done](https://img.shields.io/badge/✓-Done-brightgreen) |
+| Paper Publication | ![Done](https://img.shields.io/badge/✓-Done-brightgreen) |
+
+</div>
+
+> 💡 **Tip**: Want to explore on different time series domains? Try our framework on your own datasets following the format from [Time-Series-Library](https://github.com/thuml/Time-Series-Library).
+
+---
+
+## 🎯 Overview
+
+<p align="center">
+  <img src="assest/image.png" width="85%" alt="LM-Weather Architecture" style="border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+</p>
+
+**LM-Weather** demonstrates that **Pre-trained Language Models (PLMs)** can serve as powerful foundation models for on-device meteorological modeling. Our approach enables:
+
+<div align="center">
+
+| Feature | Description |
+|---------|-------------|
+| 🎨 **Customized Models** | Tailored models for heterogeneous meteorological data |
+| ⚡ **Efficient Knowledge Fusion** | Low-rank transmission for global knowledge integration |
+| 🔒 **Privacy-Preserving** | Secure communication between clients and server |
+| 🏆 **State-of-the-Art** | Strong performance on forecasting & imputation tasks |
+
+</div>
+
+---
+
+## 📖 Abstract
+
+<p align="justify">
+
+This paper demonstrates that **pre-trained language models (PLMs)** are strong foundation models for on-device meteorological variable modeling. We present **LM-Weather**, a generic approach to taming PLMs that have learned massive sequential knowledge from natural language databases to acquire immediate capabilities for highly customized models on heterogeneous meteorological data devices while maintaining high efficiency.
+
+Our key contributions:
+
+🧠 **Weather Pattern Awareness** — Lightweight personalized adapter infused into PLMs  
+🌐 **Global Knowledge Fusion** — Low-rank-based transmission during federated communication  
+🔐 **Privacy & Efficiency** — High communication efficiency with privacy guarantees  
+📈 **Superior Performance** — Outperforms SOTA across various forecasting & imputation tasks  
+
+Extensive experiments verify that LM-Weather can:
+1. ✅ Leverage sequential knowledge from natural language for accurate meteorological prediction
+2. ✅ Enable highly customized models under significant data heterogeneity
+3. ✅ Generalize under data-limited and out-of-distribution (OOD) scenarios
+
+</p>
+
+---
+
+## 🚦 Quick Start
+
+### 📥 Clone Repository
+
+```bash
+git clone https://github.com/username/LM-Weather.git
+cd LM-Weather
+```
+
+### 📦 Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 🔧 Model & Data Preparation
+
+<details>
+<summary><b>🤖 Foundation Models (Click to expand)</b></summary>
+
+| Model | Source | Download |
+|-------|--------|----------|
+| **GPT2** | OpenAI / Hugging Face | [Download Weights](https://huggingface.co/openai-community/gpt2/tree/main) |
+| **Open-LLAMA** | OpenLM Research | [3B v2](https://huggingface.co/openlm-research/open_llama_3b_v2) |
+| **BERT** | Google | [Base Uncased](https://huggingface.co/google-bert/bert-base-uncased) |
+
+</details>
+
+<details>
+<summary><b>📚 Libraries (Click to expand)</b></summary>
+
+- **PEFT**: [Hugging Face PEFT](https://github.com/huggingface/peft) — Parameter-Efficient Fine-Tuning
+- **Baselines**: [Time-Series-Library](https://github.com/thuml/Time-Series-Library) — Time series models
+
+</details>
+
+---
+
+## ⚙️ Configuration Guide
+
+### 📋 Training Parameters
+
+<div align="center">
 
 | Parameter | Value | Description |
 |-----------|-------|-------------|
-| seq_len | 192 | Input sequence length |
-| pred_len | [96,192,336,720] | Prediction sequence length for different forecasting ranges |
-| label_len | 48 | Length of labels used in training |
-| lbs (batch_size) | 256 | Training batch size |
-| nc (num_clients) | 15 | Number of clients in federated setting |
-| jr (join_ratio) | 0.1 | Ratio of clients participating in each round |
-| ls (local_steps) | 5 | Number of local training steps |
-| lr | 0.005 | Learning rate |
-| eg (eval_gap) | 5 | Gap between evaluations |
-| gr (global_round) | 50 | Number of global communication rounds |
+| `seq_len` | **192** | Input sequence length |
+| `pred_len` | **[96,192,336,720]** | Prediction lengths for different horizons |
+| `label_len` | **48** | Training label length |
+| `batch_size` | **256** | Training batch size |
+| `num_clients` | **15** | Number of federated clients |
+| `join_ratio` | **0.1** | Client participation ratio per round |
+| `local_steps` | **5** | Local training steps |
+| `learning_rate` | **0.005** | Learning rate |
+| `eval_gap` | **5** | Evaluation frequency |
+| `global_rounds` | **50** | Global communication rounds |
 
-**Model Configuration:**
-- `base_model`: GPT2 - Using GPT2 as foundation model (Bert or LLAMA)
-- `freeze_part`: 2 - Number of frozen layers 
-- `gpt_layers`: 1 - Number of GPT layers to use
-- `lradj`: type1 - Learning rate adjustment type
+</div>
 
-**PEFT Settings:**
-- `is_peft`: 1 - Enable PEFT
-- `peft`: lora - Using LoRA as PEFT method
-- `rank`: 32 - Rank for LoRA adaptation
+### 🏗️ Model Configuration
 
-**Data Configuration:**
-- `features`: MS - Multivariate input, Single output
-- `freq`: h - Hourly frequency 
-- `target`: rh - Target variable (relative humidity, you can custimise it in you mind)
-- `dataset`: Weather-Tiny - Dataset name (You can customise it in you mind)
+```python
+base_model = "GPT2"          # Foundation model: GPT2, BERT, or LLAMA
+freeze_part = 2              # Number of frozen layers
+gpt_layers = 1               # GPT layers to use
+lradj = "type1"              # Learning rate adjustment
+```
 
-Example usage:
+### 🔧 PEFT Settings
+
+```python
+is_peft = 1                  # Enable PEFT
+peft_method = "lora"         # LoRA adaptation
+rank = 32                    # LoRA rank
+```
+
+### 📊 Data Configuration
+
+```python
+features = "MS"              # Multivariate input, Single output
+freq = "h"                   # Hourly frequency
+target = "rh"                # Target: relative humidity (customizable)
+dataset = "Weather-Tiny"     # Dataset name (customizable)
+```
+
+### 🚀 Run Training
+
 ```bash
 bash scripts/long_term_forecast.sh
 ```
 
-## Please cite our publication if you found our research to be helpful and insightful.
+---
+
+## 📈 Performance Highlights
+
+<div align="center">
+
+| 🏆 Achievement | 📊 Result |
+|:--------------:|:---------:|
+| **State-of-the-Art** | Outperforms existing methods by large margin |
+| **Forecasting** | Multiple time horizons: 96, 192, 336, 720 |
+| **Imputation** | Robust missing data recovery |
+| **Scalability** | Efficient on-device deployment |
+
+</div>
+
+---
+
+## 📚 Citation
+
+If you find our research helpful, please cite:
 
 ```bibtex
-@inproceedings{
-chen2024personalized,
-title={Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models},
-author={Shengchao Chen and Guodong Long and Jing Jiang and Chengqi Zhang},
-booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
-year={2024},
-url={https://openreview.net/forum?id=llTroju97T}
+@inproceedings{chen2024personalized,
+  title={Personalized Adapter for Large Meteorology Model on Devices: Towards Weather Foundation Models},
+  author={Shengchao Chen and Guodong Long and Jing Jiang and Chengqi Zhang},
+  booktitle={The Thirty-eighth Annual Conference on Neural Information Processing Systems},
+  year={2024},
+  url={https://openreview.net/forum?id=llTroju97T}
 }
 ```
 
-## License
-This project is licensed under the MIT License.
+---
 
-## Acknolwedgement
-> [!note]
-> We are reshaping our code. There may be some changes to the code. 
-> We are grateful for the many open source frameworks that have given us support, including [Time-Series-Library](https://github.com/thuml/Time-Series-Library), [Huggingface PEFT](https://github.com/huggingface/peft), and [PFLlib](https://github.com/TsingZ0/PFLlib).
+## 🙏 Acknowledgements
+
+> **⚠️ Note**: We are actively reshaping our code. Some changes may occur.
+
+We gratefully acknowledge these excellent open-source frameworks:
+
+<p align="center">
+  <a href="https://github.com/thuml/Time-Series-Library">
+    <img src="https://img.shields.io/badge/Time--Series--Library-Repository-blue?style=flat-square&logo=github">
+  </a>
+  <a href="https://github.com/huggingface/peft">
+    <img src="https://img.shields.io/badge/HuggingFace%20PEFT-Repository-yellow?style=flat-square&logo=huggingface">
+  </a>
+  <a href="https://github.com/TsingZ0/PFLlib">
+    <img src="https://img.shields.io/badge/PFLlib-Repository-green?style=flat-square&logo=github">
+  </a>
+</p>
+
+---
+
+## 📜 License
+
+<p align="center">
+  <img src="https://img.shields.io/badge/License-MIT-4ECDC4?style=for-the-badge&logo=opensourceinitiative&logoColor=white" alt="MIT License">
+</p>
+
+<div align="center">
+  <p><i>© 2024 LM-Weather Team. All rights reserved.</i></p>
+  
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,30&height=100&section=footer" alt="Footer">
+</div>

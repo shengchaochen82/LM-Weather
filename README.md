@@ -257,7 +257,7 @@ We gratefully acknowledge these excellent open-source frameworks:
 </p>
 
 <div align="center">
-  <p><i>© 2024 LM-Weather Team. All rights reserved.</i></p>
+  <p><i>© 2024 Shengchao Chen. All rights reserved.</i></p>
   
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=2,3,30&height=100&section=footer" alt="Footer">
 </div>
